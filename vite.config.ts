@@ -13,9 +13,11 @@ export default defineConfig({
   server: {
     host: true,
     port: 3000,
+    allowedHosts: ["https://dev-api.it-its.id"],
   },
   preview: {
     host: true,
     port: 3001,
+    allowedHosts: ["https://dev-api.it-its.id"],
   },
 });
