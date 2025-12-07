@@ -121,7 +121,7 @@ const PlayAnagram = () => {
   }, [isLoading, gameFinished]);
 
   // --- SOUND EFFECTS ---
-  const playSound = (type: "pop" | "error") => {
+  const playSound = (type: "pop" | "error" | "success") => {
     const audio = new Audio(`/sounds/${type}.mp3`);
     audio.play().catch((err) => console.error("Error playing sound:", err));
   };
@@ -323,6 +323,9 @@ const PlayAnagram = () => {
       ) {
         return;
       }
+
+      setIsChecking(true);
+      playSound("success");
 
       const letterCount = correctWordNoSpaces.length;
 
