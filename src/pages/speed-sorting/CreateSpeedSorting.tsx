@@ -10,7 +10,7 @@ import { ActionButtons } from "./components/ActionButtons";
 import { CategoriesForm } from "./components/CategoriesForm";
 import { GameInfoForm } from "./components/GameInfoForm";
 import { WordsForm } from "./components/WordsForm";
-import { useCreateSpeedSorting } from "./hooks/useCreateSpeedSorting";
+import { useCreateSpeedSorting } from "../../api/speed-sorting/useCreateSpeedSorting";
 import { type WordItem } from "./types";
 
 export default function CreateSpeedSorting() {

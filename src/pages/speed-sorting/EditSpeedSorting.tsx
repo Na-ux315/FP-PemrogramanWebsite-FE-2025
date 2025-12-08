@@ -10,8 +10,8 @@ import { ActionButtons } from "./components/ActionButtons";
 import { CategoriesForm } from "./components/CategoriesForm";
 import { GameInfoForm } from "./components/GameInfoForm";
 import { WordsForm } from "./components/WordsForm";
-import { useGetDetailSpeedSorting } from "./hooks/useGetDetailSpeedSorting";
-import { useUpdateSpeedSorting } from "./hooks/useUpdateSpeedSorting";
+import { useGetDetailSpeedSorting } from "../../api/speed-sorting/useGetDetailSpeedSorting";
+import { useUpdateSpeedSorting } from "../../api/speed-sorting/useUpdateSpeedSorting";
 import { type WordItem } from "./types";
 
 export default function EditSpeedSorting() {
