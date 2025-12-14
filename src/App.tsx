@@ -32,6 +32,11 @@ import CreateSlidingPuzzle from "./pages/sliding-puzzle/CreateSlidingPuzzle";
 import EditSlidingPuzzle from "./pages/sliding-puzzle/EditSlidingPuzzle";
 import PlaySlidingPuzzle from "./pages/sliding-puzzle/PlaySlidingPuzzle";
 
+// Import Komponen Game The Puzzle
+import CreatePuzzle from "./pages/the-puzzle/CreatePuzzle";
+import EditPuzzle from "./pages/the-puzzle/EditPuzzle";
+import PlayPuzzle from "./pages/the-puzzle/PlayPuzzle";
+
 // Import Komponen Game Whack-a-Mole
 import CreateFlipTiles from "./pages/flip-tiles/CreateFlipTiles";
 import EditFlipTiles from "./pages/flip-tiles/EditFlipTiles";
@@ -71,6 +76,9 @@ function App() {
           path="/sliding-puzzle/play/:id"
           element={<PlaySlidingPuzzle />}
         />
+
+        {/* Rute The Puzzle (Public) */}
+        <Route path="/the-puzzle/play/:id" element={<PlayPuzzle />} />
 
         <Route element={<ProtectedRoute />}>
           <Route path="/profile" element={<ProfilePage />} />
@@ -119,6 +127,11 @@ function App() {
             path="/sliding-puzzle/edit/:id"
             element={<EditSlidingPuzzle />}
           />
+
+          {/* Rute The Puzzle  (Protected) */}
+          <Route path="/create-the-puzzle" element={<CreatePuzzle />} />
+          <Route path="/the-puzzle/edit/:id" element={<EditPuzzle />} />
+
           <Route element={<ProtectedRoute />}>
             {/* ...route lain... */}
             <Route path="/open-the-box/edit/:id" element={<EditOpenTheBox />} />
